@@ -61,22 +61,23 @@ export function Footer() {
       </div>
 
       <div className="border-t border-slate-200">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-4 text-xs text-slate-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div className="mx-auto w-full max-w-6xl px-4 py-6 text-center text-xs text-slate-500 sm:px-6 lg:px-8">
           <p>
             &copy; {year} {businessInfo.name}. All rights reserved.
           </p>
-          <p>Serving Orlando and surrounding areas.</p>
-        </div>
-        <div className="mx-auto mt-4 w-full max-w-6xl px-4 pb-6 text-center text-xs text-slate-400 sm:px-6 lg:px-8">
-          Website Design by{" "}
-          <a
-            href="https://elevatedigitalstudios.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-500 transition hover:text-dusty-blue hover:underline"
-          >
-            Elevate Digital Co.
-          </a>
+          <p className="mt-1 text-slate-400">Serving Orlando and surrounding areas.</p>
+          <p className="mt-3 text-slate-400">
+            Website Design by{" "}
+            <a
+              href="https://elevatedigitalstudios.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative font-medium text-gray-400 transition duration-300 hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500 hover:drop-shadow-[0_0_6px_rgba(56,189,248,0.5)]"
+            >
+              Elevate Digital Co.
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </p>
         </div>
       </div>
     </footer>
