@@ -67,6 +67,17 @@ export function Footer() {
           </p>
           <p>Serving Orlando and surrounding areas.</p>
         </div>
+        <div className="mx-auto mt-4 w-full max-w-6xl px-4 pb-6 text-center text-xs text-slate-400 sm:px-6 lg:px-8">
+          Website Design by{" "}
+          <a
+            href="https://elevatedigitalstudios.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 transition hover:text-dusty-blue hover:underline"
+          >
+            Elevate Digital Co.
+          </a>
+        </div>
       </div>
     </footer>
   );
