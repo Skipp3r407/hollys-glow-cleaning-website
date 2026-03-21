@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --color-cream: #f8f6f2;
+  --color-navy: #172133;
+  --color-gold: #ab9465;
+  --color-sage: #88a195;
+  --color-dusty-blue: #627992;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+}
+
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #d8dde6, transparent);
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 0.75rem;
+  border: 1px solid #d7dde7;
+  background: #ffffff;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.react-calendar__navigation button {
+  min-width: 2rem;
+  border-radius: 0.5rem;
+  color: #172133;
+  padding: 0.35rem 0.4rem;
+  font-weight: 600;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #eef2f7;
+}
+
+.react-calendar__month-view__weekdays {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+}
+
+.react-calendar__tile {
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.2rem;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: #eef2f7;
+}
+
+.react-calendar__tile--active {
+  background: #172133;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  border: 1px solid #627992;
+  background: #eef4fb;
+}
