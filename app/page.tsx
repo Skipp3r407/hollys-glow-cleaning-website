@@ -36,6 +36,33 @@ export default function Home() {
   return (
     <>
       <JsonLd data={getLocalBusinessSchema()} />
+      <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto flex min-h-[58vh] w-full max-w-6xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-dusty-blue">
+            Holly&apos;s Glow Suds and Scents L.L.C.
+          </p>
+          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
+            Professional Cleaning Services in Orlando, FL
+          </h1>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+            Reliable, detailed cleaning for homes, rentals, and move-ins
+          </p>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="/contact"
+              className="rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+            >
+              Book Your Cleaning
+            </Link>
+            <a
+              href="tel:+13215506592"
+              className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-navy"
+            >
+              321-550-6592
+            </a>
+          </div>
+        </div>
+      </section>
       <HeroSection />
       <TrustBar items={trustPoints} />
 
