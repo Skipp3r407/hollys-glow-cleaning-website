@@ -10,6 +10,30 @@ export const businessInfo = {
   addressRegion: "FL",
 };
 
+/** Official social profiles (footer & optional reuse). Order: WhatsApp, X, Instagram, Facebook. */
+export const socialLinks = [
+  {
+    id: "whatsapp",
+    label: "WhatsApp",
+    href: "https://wa.me/13215506592",
+  },
+  {
+    id: "x",
+    label: "X",
+    href: "https://x.com/hollysglow",
+  },
+  {
+    id: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/hollysglowsudsandscents",
+  },
+  {
+    id: "facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/hollysglowsudsandscents",
+  },
+] as const;
+
 export type ServiceItem = {
   slug: string;
   name: string;
@@ -120,6 +144,47 @@ export const services: ServiceItem[] = [
       "After contractor completion",
       "Final cleanup before occupancy",
     ],
+  },
+];
+
+/** One-line “Inclusions” copy for the /services pricing summary table. */
+export const servicesPricingTableSummaries: Record<string, string> = {
+  "glow-basic":
+    "Routine maintenance cleaning for kitchens, bathrooms, and living areas",
+  "glow-deep":
+    "Detailed top-to-bottom cleaning targeting buildup and overlooked areas",
+  "glow-air":
+    "Light refresh cleaning ideal for upkeep or short-term rental turnovers",
+  "glow-move": "Move-in or move-out cleaning for empty homes",
+  "glow-post-construction":
+    "Post-renovation cleanup for dust, debris residue, and detailed wipe-downs",
+};
+
+/** Featured client quotes shown on the Services & pricing page. */
+export const servicesPageTestimonials: {
+  name: string;
+  date: string;
+  quote: string;
+  source?: string;
+}[] = [
+  {
+    name: "Elizabeth H.",
+    date: "1/29/26",
+    quote:
+      "Holly did an amazing job! Bathrooms and bedrooms were spotless. She even left an awesome-smelling candle for us to use. Highly recommend!",
+  },
+  {
+    name: "Diane M.",
+    date: "1/28/26",
+    quote:
+      "I hired Holly for a Deep Clean and my house still sparkles. Thank you for a job well done. I look forward to the future with this cleaning team.",
+  },
+  {
+    name: "Everett Street",
+    date: "January 17",
+    source: "Facebook recommendation",
+    quote:
+      "Holly's Glow Suds and Scents did an amazing job! The kitchen, bathrooms, walls, and floors were spotless, and even the carpet spot cleaning looked fantastic—everything felt fresh and truly cared for. Professional, thorough, and reliable service I'd highly recommend.",
   },
 ];
 

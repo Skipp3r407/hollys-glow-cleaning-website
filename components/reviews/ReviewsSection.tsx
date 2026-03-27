@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Star } from "lucide-react";
 import { btnSecondary } from "@/components/ui/buttonStyles";
+import { interactiveHover } from "@/components/ui/interactiveStyles";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/cn";
@@ -30,7 +31,12 @@ export function ReviewsSection({ className }: ReviewsSectionProps) {
 
       <div className="relative z-[1] mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll variant="fade-up">
-          <div className="rounded-2xl border border-slate-200/80 bg-white/90 px-5 py-6 shadow-sm backdrop-blur-sm sm:px-7 sm:py-7">
+          <div
+            className={cn(
+              "rounded-2xl border border-slate-200/80 bg-white/90 px-5 py-6 shadow-sm backdrop-blur-sm sm:px-7 sm:py-7",
+              interactiveHover,
+            )}
+          >
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-4">
                 <div
@@ -84,7 +90,12 @@ export function ReviewsSection({ className }: ReviewsSectionProps) {
         </div>
 
         <RevealOnScroll variant="fade-in" className="mt-10">
-          <div className="flex flex-col items-stretch gap-4 rounded-2xl border border-slate-200/90 bg-white/80 px-5 py-6 text-center shadow-sm sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <div
+            className={cn(
+              "flex flex-col items-stretch gap-4 rounded-2xl border border-slate-200/90 bg-white/80 px-5 py-6 text-center shadow-sm sm:flex-row sm:items-center sm:justify-between sm:text-left",
+              interactiveHover,
+            )}
+          >
             <div>
               <p className="text-sm font-medium text-navy">
                 We appreciate every review and love hearing from our clients.

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/ui/CTASection";
 import { GalleryGrid } from "@/components/ui/GalleryGrid";
+import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { galleryItems } from "@/lib/site-data";
 import { pageMetadata } from "@/lib/seo";
@@ -18,14 +19,16 @@ export default function GalleryPage() {
     <>
       <section className="py-16 sm:py-20">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Gallery / Results"
-            title="See the Difference a Detailed Clean Makes"
-            description="These sample placeholders are ready to be replaced with your real before-and-after photos."
-          />
-          <div className="mt-8">
+          <RevealOnScroll variant="fade-up">
+            <SectionHeading
+              eyebrow="Gallery / Results"
+              title="See the Difference a Detailed Clean Makes"
+              description="These sample placeholders are ready to be replaced with your real before-and-after photos."
+            />
+          </RevealOnScroll>
+          <RevealOnScroll variant="fade-up" delay={80} className="mt-8">
             <GalleryGrid items={galleryItems} />
-          </div>
+          </RevealOnScroll>
         </div>
       </section>
 

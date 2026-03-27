@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ServiceItem } from "@/lib/site-data";
 import { btnPrimary } from "@/components/ui/buttonStyles";
+import { interactiveHover, interactiveHoverGold } from "@/components/ui/interactiveStyles";
 import { cn } from "@/lib/cn";
 
 type ServiceCardProps = {
@@ -17,17 +18,34 @@ export function ServiceCard({
   return (
     <article
       className={cn(
-        "group rounded-2xl border p-6 transition duration-300 ease-out will-change-transform",
+        "group rounded-2xl border p-6 will-change-transform",
         featured
-          ? "border-gold/45 bg-white shadow-lg shadow-gold/15 ring-1 ring-gold/20 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-gold/20"
-          : "border-slate-200 bg-white hover:-translate-y-1.5 hover:border-dusty-blue/25 hover:shadow-xl hover:shadow-slate-400/20",
+          ? cn(
+              "border-gold/45 bg-white shadow-lg shadow-gold/15 ring-1 ring-gold/20",
+              interactiveHoverGold,
+            )
+          : cn("border-slate-200 bg-white", interactiveHover),
       )}
     >
       <div className="flex items-start justify-between gap-2">
-        <h3 className="text-xl font-bold text-navy transition group-hover:text-navy/90">
+        <h3
+          className={cn(
+            "text-xl font-bold text-navy transition",
+            featured
+              ? "group-hover:text-gold/90"
+              : "group-hover:text-dusty-blue",
+          )}
+        >
           {service.name}
         </h3>
-        <p className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 transition group-hover:bg-slate-200/90">
+        <p
+          className={cn(
+            "rounded-full border border-transparent bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 transition",
+            featured
+              ? "group-hover:bg-gold/20 group-hover:text-navy"
+              : "group-hover:border-dusty-blue/25 group-hover:bg-dusty-blue/10 group-hover:text-navy",
+          )}
+        >
           {service.price}
         </p>
       </div>

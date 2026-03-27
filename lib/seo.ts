@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { businessInfo } from "@/lib/site-data";
+import { businessInfo, socialLinks } from "@/lib/site-data";
 
 export const siteUrl = "https://hollysglow.com";
 
@@ -56,7 +56,7 @@ export function getLocalBusinessSchema() {
       addressRegion: businessInfo.addressRegion,
       addressCountry: "US",
     },
-    sameAs: ["https://www.facebook.com/"],
+    sameAs: socialLinks.map((s) => s.href),
     serviceType: [
       "House cleaning Orlando FL",
       "Residential cleaning Orlando",

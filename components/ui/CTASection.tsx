@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { businessInfo } from "@/lib/site-data";
 import { btnOnDark, btnOutlineOnDark } from "@/components/ui/buttonStyles";
+import { interactiveHoverNavyBanner } from "@/components/ui/interactiveStyles";
+import { cn } from "@/lib/cn";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
 type CTASectionProps = {
@@ -14,7 +16,12 @@ export function CTASection({ title, text, compact = false }: CTASectionProps) {
     <section className={compact ? "" : "py-16"}>
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll variant="fade-up">
-          <div className="relative overflow-hidden rounded-3xl bg-navy px-6 py-10 text-white shadow-xl shadow-navy/25 sm:px-10">
+          <div
+            className={cn(
+              "relative overflow-hidden rounded-3xl border border-navy bg-navy px-6 py-10 text-white shadow-xl shadow-navy/25 sm:px-10",
+              interactiveHoverNavyBanner,
+            )}
+          >
             <div className="pointer-events-none absolute -right-16 top-0 h-48 w-48 rounded-full bg-white/5 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-12 -left-8 h-40 w-40 rounded-full bg-dusty-blue/20 blur-3xl" />
             <div className="relative">

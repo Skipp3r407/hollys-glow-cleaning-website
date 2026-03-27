@@ -10,7 +10,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { TrustBar } from "@/components/ui/TrustBar";
+import { interactiveHover } from "@/components/ui/interactiveStyles";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { cn } from "@/lib/cn";
 import {
   faqs,
   galleryItems,
@@ -114,8 +116,15 @@ export default function Home() {
                 variant="fade-up"
                 delay={index * 75}
               >
-                <div className="h-full rounded-xl border border-slate-200 bg-white px-4 py-4 text-sm font-medium text-slate-700 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-dusty-blue/25 hover:shadow-lg">
-                  {point}
+                <div
+                  className={cn(
+                    "group h-full rounded-xl border border-slate-200 bg-white px-4 py-4 text-sm font-medium shadow-sm",
+                    interactiveHover,
+                  )}
+                >
+                  <span className="text-slate-700 transition group-hover:text-dusty-blue">
+                    {point}
+                  </span>
                 </div>
               </RevealOnScroll>
             ))}
@@ -138,7 +147,12 @@ export default function Home() {
             </div>
           </RevealOnScroll>
           <RevealOnScroll variant="slide-right">
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-100 to-cream p-8 shadow-inner transition duration-500 hover:border-gold/20 hover:shadow-lg">
+            <div
+              className={cn(
+                "rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-100 to-cream p-8 shadow-inner transition-colors hover:from-slate-50 hover:to-white",
+                interactiveHover,
+              )}
+            >
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
                 Brand Promise
               </p>

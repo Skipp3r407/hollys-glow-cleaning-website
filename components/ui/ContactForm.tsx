@@ -3,6 +3,8 @@
 import { FormEvent, useState } from "react";
 import Calendar from "react-calendar";
 import type { Value } from "react-calendar/dist/shared/types.js";
+import { interactiveHover } from "@/components/ui/interactiveStyles";
+import { cn } from "@/lib/cn";
 import { businessInfo, services } from "@/lib/site-data";
 
 type FormState = {
@@ -75,7 +77,10 @@ ${formState.message}
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
+      className={cn(
+        "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6",
+        interactiveHover,
+      )}
     >
       <div className="grid gap-4 md:grid-cols-2">
         <label className="text-sm font-medium text-slate-700">
@@ -162,7 +167,11 @@ ${formState.message}
         </label>
       </div>
 
-      <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <div
+        className={cn(
+          "mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 transition duration-300 hover:border-dusty-blue/25 hover:bg-white hover:shadow-md",
+        )}
+      >
         <p className="text-sm font-semibold text-slate-700">Select from calendar</p>
         <p className="mt-1 text-xs text-slate-500">
           Pick your preferred booking date. We will confirm final availability.

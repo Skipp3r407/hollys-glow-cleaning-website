@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Holly's Glow">
+  <rect width="32" height="32" rx="7" fill="#172133"/>
+  <!-- bristles -->
+  <rect x="7" y="23" width="18" height="3" rx="1" fill="#f8f6f2"/>
+  <!-- ferrule -->
+  <rect x="11.5" y="18.5" width="9" height="4.5" rx="0.75" fill="#627992"/>
+  <!-- handle -->
+  <rect x="13" y="7" width="6" height="12.5" rx="1.75" fill="#ab9465"/>
+</svg>

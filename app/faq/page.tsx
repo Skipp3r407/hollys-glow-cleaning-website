@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/ui/CTASection";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqs } from "@/lib/site-data";
@@ -20,15 +21,17 @@ export default function FAQPage() {
       <JsonLd data={getFaqSchema(faqs)} />
       <section className="py-16 sm:py-20">
         <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            centered
-            eyebrow="Frequently Asked Questions"
-            title="Everything You Need Before Booking"
-            description="Quick answers to common questions from Orlando homeowners and short-term rental hosts."
-          />
-          <div className="mt-8">
+          <RevealOnScroll variant="fade-up">
+            <SectionHeading
+              centered
+              eyebrow="Frequently Asked Questions"
+              title="Everything You Need Before Booking"
+              description="Quick answers to common questions from Orlando homeowners and short-term rental hosts."
+            />
+          </RevealOnScroll>
+          <RevealOnScroll variant="fade-up" delay={70} className="mt-8">
             <FAQAccordion items={faqs} />
-          </div>
+          </RevealOnScroll>
         </div>
       </section>
 

@@ -2,6 +2,7 @@
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { interactiveHoverTight } from "@/components/ui/interactiveStyles";
 import { cn } from "@/lib/cn";
 
 type FAQItem = {
@@ -26,8 +27,11 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
             className={cn(
               "overflow-hidden rounded-xl border transition duration-300 ease-out",
               open
-                ? "border-dusty-blue/35 bg-white shadow-md shadow-slate-400/10"
-                : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50",
+                ? "border-dusty-blue/40 bg-white shadow-md shadow-slate-400/10 ring-1 ring-dusty-blue/10"
+                : cn(
+                    "border-slate-200 bg-white hover:bg-slate-50/80",
+                    interactiveHoverTight,
+                  ),
             )}
           >
             <button

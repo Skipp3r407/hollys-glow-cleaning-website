@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LeaveReviewButton } from "@/components/reviews/LeaveReviewButton";
+import { SocialLinks } from "@/components/layout/SocialLinks";
 import { businessInfo, navLinks } from "@/lib/site-data";
 
 const year = new Date().getFullYear();
@@ -56,10 +57,11 @@ export function Footer() {
               </a>
             </li>
             <li>Orlando, FL</li>
-            <li>
-              <a href="https://www.facebook.com/" className="transition hover:text-navy">
-                Facebook
-              </a>
+            <li className="pt-2">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                Follow us
+              </p>
+              <SocialLinks />
             </li>
           </ul>
         </div>
