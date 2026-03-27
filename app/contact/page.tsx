@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LeaveReviewButton } from "@/components/reviews/LeaveReviewButton";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { businessInfo } from "@/lib/site-data";
@@ -76,6 +77,17 @@ export default function ContactPage() {
                 We confirm details before your appointment and tailor each visit to
                 your space, preferences, and schedule.
               </p>
+            </article>
+
+            <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h2 className="text-lg font-bold text-navy">Love your clean?</h2>
+              <p className="mt-2 text-sm leading-7 text-slate-700">
+                Had a great experience? Leave us a Google review — it helps other
+                Orlando neighbors find dependable cleaning.
+              </p>
+              <div className="mt-4">
+                <LeaveReviewButton />
+              </div>
             </article>
           </aside>
         </div>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { ServiceItem } from "@/lib/site-data";
+import { btnPrimary } from "@/components/ui/buttonStyles";
+import { cn } from "@/lib/cn";
 
 type ServiceCardProps = {
   service: ServiceItem;
@@ -14,15 +16,18 @@ export function ServiceCard({
 }: ServiceCardProps) {
   return (
     <article
-      className={`rounded-2xl border p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+      className={cn(
+        "group rounded-2xl border p-6 transition duration-300 ease-out will-change-transform",
         featured
-          ? "border-gold/40 bg-white shadow-lg shadow-gold/10"
-          : "border-slate-200 bg-white"
-      }`}
+          ? "border-gold/45 bg-white shadow-lg shadow-gold/15 ring-1 ring-gold/20 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-gold/20"
+          : "border-slate-200 bg-white hover:-translate-y-1.5 hover:border-dusty-blue/25 hover:shadow-xl hover:shadow-slate-400/20",
+      )}
     >
       <div className="flex items-start justify-between gap-2">
-        <h3 className="text-xl font-bold text-navy">{service.name}</h3>
-        <p className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700">
+        <h3 className="text-xl font-bold text-navy transition group-hover:text-navy/90">
+          {service.name}
+        </h3>
+        <p className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 transition group-hover:bg-slate-200/90">
           {service.price}
         </p>
       </div>
@@ -60,10 +65,7 @@ export function ServiceCard({
       ) : null}
 
       <div className="mt-6">
-        <Link
-          href="/contact"
-          className="inline-flex rounded-full bg-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
-        >
+        <Link href="/contact" className={btnPrimary}>
           Book This Service
         </Link>
       </div>

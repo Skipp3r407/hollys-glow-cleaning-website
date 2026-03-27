@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/ui/CTASection";
+import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { pageMetadata } from "@/lib/seo";
 
@@ -44,13 +45,16 @@ export default function AboutPage() {
     <>
       <section className="py-16 sm:py-20">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="About Holly's Glow"
-            title="A Local Orlando Cleaning Company Built on Trust"
-            description="Holly's Glow Suds and Scents L.L.C. was founded to give busy homeowners and rental hosts a dependable way to maintain a clean, welcoming space without the stress."
-          />
+          <RevealOnScroll variant="fade-up">
+            <SectionHeading
+              eyebrow="About Holly's Glow"
+              title="A Local Orlando Cleaning Company Built on Trust"
+              description="Holly's Glow Suds and Scents L.L.C. was founded to give busy homeowners and rental hosts a dependable way to maintain a clean, welcoming space without the stress."
+            />
+          </RevealOnScroll>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <article className="rounded-2xl border border-slate-200 bg-white p-6">
+            <RevealOnScroll variant="slide-left">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-dusty-blue/20 hover:shadow-lg">
               <h2 className="text-2xl font-bold text-navy">Our Story</h2>
               <p className="mt-4 text-sm leading-7 text-slate-700">
                 We started with one clear vision: professional cleaning should
@@ -64,8 +68,10 @@ export default function AboutPage() {
                 properties.
               </p>
             </article>
+            </RevealOnScroll>
 
-            <article className="rounded-2xl border border-slate-200 bg-white p-6">
+            <RevealOnScroll variant="slide-right">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-dusty-blue/20 hover:shadow-lg">
               <h2 className="text-2xl font-bold text-navy">Our Mission</h2>
               <p className="mt-4 text-sm leading-7 text-slate-700">
                 To provide dependable, detail-oriented cleaning that helps clients
@@ -77,28 +83,32 @@ export default function AboutPage() {
                 our focus is simple: professional results you can count on.
               </p>
             </article>
+            </RevealOnScroll>
           </div>
         </div>
       </section>
 
       <section className="bg-white py-16">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Why We Are Different"
-            title="Elevated Service with Local, Personal Care"
-            description="We combine polished presentation with small-business attention, so every client feels seen and supported."
-          />
+          <RevealOnScroll>
+            <SectionHeading
+              eyebrow="Why We Are Different"
+              title="Elevated Service with Local, Personal Care"
+              description="We combine polished presentation with small-business attention, so every client feels seen and supported."
+            />
+          </RevealOnScroll>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map((value) => (
+            {values.map((value, index) => (
+              <RevealOnScroll key={value.title} variant="fade-up" delay={index * 70}>
               <article
-                key={value.title}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-5"
+                className="h-full rounded-xl border border-slate-200 bg-slate-50 p-5 transition duration-300 hover:-translate-y-1 hover:border-gold/25 hover:bg-white hover:shadow-lg"
               >
                 <h3 className="text-lg font-semibold text-navy">{value.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-700">
                   {value.description}
                 </p>
               </article>
+              </RevealOnScroll>
             ))}
           </div>
         </div>

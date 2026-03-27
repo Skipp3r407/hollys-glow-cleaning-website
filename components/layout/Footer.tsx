@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LeaveReviewButton } from "@/components/reviews/LeaveReviewButton";
 import { businessInfo, navLinks } from "@/lib/site-data";
 
 const year = new Date().getFullYear();
@@ -15,6 +16,10 @@ export function Footer() {
             Clean, comfortable homes with reliable local service.
           </h2>
           <p className="mt-3 text-sm text-slate-600">{businessInfo.serviceArea}</p>
+          <p className="mt-5 text-sm text-slate-600">
+            Had a great experience?{" "}
+            <LeaveReviewButton variant="compact" className="font-semibold" />
+          </p>
         </div>
 
         <div>

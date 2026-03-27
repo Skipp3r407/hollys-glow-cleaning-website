@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { ChatbotWidget } from "@/components/chatbot/ChatbotWidget";
+import { LoadingScreen } from "@/components/LoadingScreen";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileQuickActions } from "@/components/layout/MobileQuickActions";
@@ -65,12 +67,14 @@ export default function RootLayout({
       className={`${headingFont.variable} ${bodyFont.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-cream text-slate-900">
-        <div className="flex min-h-screen flex-col pb-20 lg:pb-0">
+        <div className="flex min-h-screen flex-col pb-32 lg:pb-0">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
           <MobileQuickActions />
+          <ChatbotWidget />
         </div>
+        <LoadingScreen />
       </body>
     </html>
   );
