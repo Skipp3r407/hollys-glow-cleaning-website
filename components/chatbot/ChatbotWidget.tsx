@@ -74,23 +74,22 @@ export function ChatbotWidget() {
       className="pointer-events-none fixed bottom-24 right-4 z-[60] flex flex-col items-end gap-3 sm:right-6 lg:bottom-8 lg:right-8"
       aria-live="polite"
     >
-      <div className="pointer-events-auto">
-        <BackToTopButton />
-      </div>
-
+      {/* Back-to-top sits directly above the chat launcher; panel opens above the button */}
       <div className="pointer-events-auto flex flex-col items-end gap-3">
-        <ChatbotWindow
-          open={open}
-          messages={messages}
-          input={input}
-          onInputChange={setInput}
-          onSubmit={onSubmit}
-          onQuickReply={sendText}
-          onClose={() => setOpen(false)}
-          listRef={listRef}
-        />
-
-        <ChatbotLauncher open={open} onToggle={() => setOpen((v) => !v)} />
+        <BackToTopButton />
+        <div className="relative shrink-0">
+          <ChatbotWindow
+            open={open}
+            messages={messages}
+            input={input}
+            onInputChange={setInput}
+            onSubmit={onSubmit}
+            onQuickReply={sendText}
+            onClose={() => setOpen(false)}
+            listRef={listRef}
+          />
+          <ChatbotLauncher open={open} onToggle={() => setOpen((v) => !v)} />
+        </div>
       </div>
     </div>
   );

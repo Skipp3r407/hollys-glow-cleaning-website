@@ -1,6 +1,6 @@
 "use client";
 
-import { Send, Sparkles, X } from "lucide-react";
+import { BrushCleaning, Send, X } from "lucide-react";
 import Link from "next/link";
 import type { RefObject } from "react";
 import { QUICK_REPLIES } from "@/lib/chatbotData";
@@ -32,20 +32,20 @@ export function ChatbotWindow({
   onClose,
   listRef,
 }: ChatbotWindowProps) {
+  if (!open) {
+    return null;
+  }
+
   return (
     <div
       id="holly-glow-chat-panel"
-      className={`origin-bottom-right transition duration-300 ease-out ${
-        open
-          ? "scale-100 opacity-100"
-          : "pointer-events-none scale-95 opacity-0"
-      }`}
+      className="pointer-events-auto absolute bottom-full right-0 z-10 mb-3 w-[min(100vw-2rem,380px)] origin-bottom-right transition duration-300 ease-out"
     >
       <div className="flex h-[min(70vh,520px)] w-[min(100vw-2rem,380px)] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-400/30">
         <header className="flex items-center justify-between gap-2 border-b border-slate-100 bg-navy px-4 py-3 text-white">
           <div className="flex min-w-0 items-center gap-2">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15">
-              <Sparkles className="h-4 w-4 text-gold" />
+              <BrushCleaning className="h-4 w-4 text-gold" />
             </span>
             <div className="min-w-0">
               <p className="truncate text-sm font-semibold">

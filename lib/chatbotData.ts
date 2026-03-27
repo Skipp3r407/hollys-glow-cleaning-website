@@ -625,4 +625,104 @@ export const CHATBOT_FAQS: ChatbotFaq[] = [
     answer:
       "Laundry areas can be wiped down and tidied as part of your cleaning scope. Add laundry folding only if offered and scheduled as an add-on.",
   },
+  {
+    id: "faq-101",
+    keywords: [
+      "pricing",
+      "prices",
+      "price list",
+      "package prices",
+      "cleaning packages cost",
+      "how much do your cleaning packages cost",
+      "how much are your services",
+      "what are your prices",
+      "cost of cleaning",
+      "baseline prices",
+      "menu",
+      "price sheet",
+    ],
+    answer:
+      "Here are baseline starting prices for our packages: Glow Basic $140 (routine maintenance), Glow Deep $250 (detailed reset—popular for first visits and seasonal refreshes), Glow Air $130 (light refresh / Airbnb-style turnovers), Glow Move $350 (move-in or move-out in an empty or mostly empty home), and Glow Post-Construction $350 (post-renovation dust and detail cleanup). Add-on services start from $20 (e.g. inside fridge or oven, interior windows, patio sweeping, laundry folding, pet hair removal). Listed prices are estimates—final cost can vary by home size, condition, and add-ons. We confirm details before your appointment.",
+  },
+  {
+    id: "faq-102",
+    keywords: [
+      "featured package",
+      "most popular package",
+      "best package",
+      "recommended package",
+      "which package should i choose",
+    ],
+    answer:
+      "Glow Deep ($250 baseline) is highlighted as our featured reset—it is ideal when you want extra detail and buildup removal. Many new clients use it for a thorough first clean, then switch to Glow Basic for ongoing maintenance. For quick rental turnovers, Glow Air ($130) is built for speed and guest-ready results.",
+  },
+  {
+    id: "faq-103",
+    keywords: [
+      "hourly",
+      "per hour",
+      "hourly rate",
+      "charged by the hour",
+    ],
+    answer:
+      "We advertise clear package baseline prices (for example Glow Basic $140, Glow Deep $250, Glow Air $130). Total time on site depends on home size and condition, but quotes are built around the package and scope—not an open-ended hourly menu on the website. Share your details for a tailored estimate.",
+  },
+  {
+    id: "faq-104",
+    keywords: [
+      "cheapest",
+      "least expensive",
+      "lowest price",
+      "budget",
+      "affordable",
+      "smallest package",
+    ],
+    answer:
+      "Our lowest baseline package price is Glow Air at $130 (light refresh and short-term rental style turnovers). Glow Basic at $140 is the next step for routine home maintenance. Final pricing still depends on your home’s size and needs.",
+  },
+  {
+    id: "faq-105",
+    keywords: [
+      "why is deep more",
+      "why does deep cost",
+      "difference in price",
+      "more than basic",
+    ],
+    answer:
+      "Glow Deep ($250) includes more intensive detail work—deeper kitchen and bath cleaning, baseboards/trim, thorough dusting in overlooked areas, and extended floor and touch-point work—compared with Glow Basic ($140), which is designed for recurring upkeep. More time and attention means a higher baseline price.",
+  },
+  {
+    id: "faq-106",
+    keywords: [
+      "both 350",
+      "two packages 350",
+      "move vs post construction",
+      "move or post construction",
+    ],
+    answer:
+      "Glow Move and Glow Post-Construction both start at a $350 baseline, but they solve different problems: Move cleaning focuses on empty-home transitions (cabinets, closets, move-in/move-out readiness). Post-construction cleaning targets renovation dust, debris residue, and polish after contractors finish. Tell us which situation you are in so we schedule the right scope.",
+  },
+  {
+    id: "faq-107",
+    keywords: [
+      "hidden fees",
+      "extra fees",
+      "surprise charges",
+      "unexpected cost",
+    ],
+    answer:
+      "We are upfront about baseline package prices and that totals can change with home size, condition, and add-ons. You will confirm the plan before service so there are no surprises about what is included.",
+  },
+  {
+    id: "faq-108",
+    keywords: [
+      "pay before",
+      "pay after",
+      "deposit",
+      "when do i pay",
+      "payment due",
+    ],
+    answer:
+      "Payment timing and methods are confirmed when you book. Mention any questions about deposits or preferred payment types in your message or when you call 321-550-6592.",
+  },
 ];

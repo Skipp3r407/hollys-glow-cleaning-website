@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, X } from "lucide-react";
+import { BrushCleaning, X } from "lucide-react";
 
 type ChatbotLauncherProps = {
   open: boolean;
@@ -21,7 +21,7 @@ export function ChatbotLauncher({ open, onToggle }: ChatbotLauncherProps) {
       {open ? (
         <X className="h-6 w-6" />
       ) : (
-        <Sparkles className="h-7 w-7" strokeWidth={2} />
+        <BrushCleaning className="h-7 w-7" strokeWidth={2} />
       )}
     </button>
   );
